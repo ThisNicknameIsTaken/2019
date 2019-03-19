@@ -11,14 +11,14 @@ typedef struct tagDot {
 }Dot;
 
 typedef struct tagTrapezium {
-	 Dot *leftBottomCorner;
-	 Dot *leftTopCorner;
-	 Dot *rightTopCorner;
-	 Dot *rightBottomCorner;
-	 float square;
+	Dot *leftBottomCorner;
+	Dot *leftTopCorner;
+	Dot *rightTopCorner;
+	Dot *rightBottomCorner;
+	float square;
 }Trapezium;
 
-Dot *createDot();
+Dot *createDot(int x, int y);
 Dot *generateDot(int x, int y, char id);
 
 Trapezium *createTrapezium();
@@ -36,7 +36,6 @@ Dot* findBottomDot(Trapezium *trap);
 
 float calculateTrapeziumSquare(Trapezium *trap);
 
-int isOnLine(Dot *a, Dot *b, int x, int y);
-int compareDot(Dot *a,int x, int y,int offsetX, int offsetY, int currentId);
+int compareDot(Dot *a, int x, int y, int offsetX, int offsetY, int currentId);
 
 float calculateLineLength(Dot *a, Dot *b);
